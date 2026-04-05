@@ -1,23 +1,29 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import Experience from './components/Experience';
-import Projects from './components/Projects';
-import Skills from './components/Skills';
-import Achievements from './components/Achievements';
-import Footer from './components/Footer';
+
+// Lazy load below-the-fold components for faster initial render
+const Experience = lazy(() => import('./components/Experience'));
+const Projects = lazy(() => import('./components/Projects'));
+const Skills = lazy(() => import('./components/Skills'));
+const Achievements = lazy(() => import('./components/Achievements'));
+const Footer = lazy(() => import('./components/Footer'));
 
 function App() {
   return (
     <>
       <main>
         <Hero />
-        <Experience />
-        <Projects />
-        <Skills />
-        <Achievements />
+        <Suspense fallback={<div style={{ height: '50vh' }}></div>}>
+          <Experience />
+          <Projects />
+          <Skills />
+          <Achievements />
+        </Suspense>
       </main>
-      <Footer />
+      <Suspense fallback={<div></div>}>
+        <Footer />
+      </Suspense>
       <Navbar />
     </>
   );
