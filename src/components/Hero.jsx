@@ -1,48 +1,98 @@
-import React from 'react';
-import './Hero.css';
+import React, { useEffect, useRef } from 'react';
+import styled from 'styled-components';
 
 export default function Hero() {
+  const heroRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-revealed');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    if (heroRef.current) observer.observe(heroRef.current);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section id="about" className="hero container">
-      <div className="hero-content">
-        <div className="status-badge fade-in delay-1">
-          <span className="status-dot"></span> Currently at Bajaj Finserv Health Limited
-        </div>
-
-        <h1 className="hero-title fade-in delay-1">
-          Hi, I'm Aadish Sanghvi
-        </h1>
-        <h2 className="hero-subtitle fade-in delay-2">
-          Data Scientist & AI/ML Engineer
-        </h2>
-
-        <div className="hero-description fade-in delay-3">
-          <p>
-            Final-year B.Tech CSE student, 2026 and Data Engineering Intern at Bajaj Finserv Health, specializing in scalable ETL pipelines and Applied AI. As a Smart India Hackathon 2024 Finalist, I’ve built high-impact solutions ranging from industrial AI systems for NALCO to RAG-based LLM applications and NLP-to-SQL interfaces. I thrive at the intersection of robust data architecture (Airflow, Synapse) and intelligent systems (LangGraph, Generative AI).
+    <HeroSection ref={heroRef} className="reveal-on-scroll">
+      <div className="grid-container">
+        <div className="hero-content">
+          <span className="mono-text accent-text hero-label">DATA SCIENTIST & AI ENGINEER</span>
+          <h1 className="hero-title">
+            Intelligence,<br/>
+            Engineered.
+          </h1>
+          <p className="hero-positioning">
+            Building at the intersection of robust data architecture and applied generative AI to solve complex enterprise challenges.
           </p>
-        </div>
-
-        <ul className="hero-list fade-in delay-3">
-          <li>🏢 Data Science Intern · Bajaj Finserv Health Limited, Pune</li>
-          <li>🎓 B.Tech CSE · Acropolis Institute of Technology & Research, Indore</li>
-          <li>📅 Expected Graduation: 2026 · CGPA 7.42</li>
-          <li>📍 Pune, Maharashtra</li>
-        </ul>
-
-        <div className="hero-actions fade-in delay-3">
-          <a href="#contact" className="btn btn-primary">Get in touch</a>
-          <a href="https://github.com/Aadish-Sanghvi" target="_blank" rel="noreferrer" className="btn btn-outline">
-            GitHub ↗
-          </a>
-          <a href="https://www.linkedin.com/in/aadish-sanghvi/" target="_blank" rel="noreferrer" className="btn btn-outline">
-            LinkedIn ↗
+          <a href="#projects" className="cta-button mono-text">
+            View Work
           </a>
         </div>
       </div>
-
-      <div className="hero-image-container fade-in delay-2">
-        <img src="/profile.jpg" alt="Aadish Sanghvi" className="hero-image" />
-      </div>
-    </section>
+    </HeroSection>
   );
 }
+
+const HeroSection = styled.section`
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: var(--space-8);
+  padding-bottom: var(--space-8);
+
+  .hero-content {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-label {
+    margin-bottom: var(--space-4);
+    letter-spacing: 0.05em;
+  }
+
+  .hero-title {
+    font-size: clamp(4rem, 8vw, 6.5rem);
+    font-weight: 500;
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+    margin-bottom: var(--space-4);
+    color: var(--text-primary);
+  }
+
+  .hero-positioning {
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    max-width: 60ch;
+    color: var(--text-secondary);
+    margin-bottom: var(--space-6);
+  }
+
+  .cta-button {
+    border: 1px solid var(--border-color);
+    padding: var(--space-3) var(--space-5);
+    background: transparent;
+    color: var(--text-primary);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .cta-button:hover {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+    box-shadow: 0 0 10px rgba(0, 255, 209, 0.1);
+    opacity: 1;
+  }
+
+  @media (min-width: 768px) {
+    .hero-content {
+      grid-column: 2 / 11;
+    }
+  }
+`;

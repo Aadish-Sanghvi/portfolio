@@ -1,23 +1,36 @@
 import React, { useEffect, useState } from 'react';
-import { Moon, Sun } from 'lucide-react';
+import styled from 'styled-components';
 
 export default function ThemeToggle() {
-  const [theme, setTheme] = useState(
-    () => localStorage.getItem('theme') || 'dark'
-  );
+  const [theme, setTheme] = useState(() => {
+    return localStorage.getItem('theme') || 'light';
+  });
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
-    localStorage.setItem('theme', theme);
   }, [theme]);
 
-  const toggleTheme = () => {
-    setTheme(prev => (prev === 'light' ? 'dark' : 'light'));
+  const toggle = () => {
+    const next = theme === 'light' ? 'dark' : 'light';
+    setTheme(next);
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
   };
 
   return (
-    <button onClick={toggleTheme} className="btn-icon" aria-label="Toggle theme">
-      {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
-    </button>
+    <ToggleButton onClick={toggle} className="mono-text" aria-label="Toggle Theme">
+      {theme === 'light' ? 'DARK' : 'LIGHT'}
+    </ToggleButton>
   );
 }
+
+const ToggleButton = styled.button`
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  color: var(--text-secondary);
+  transition: color 0.3s ease;
+  
+  &:hover {
+    color: var(--accent-color);
+  }
+`;
