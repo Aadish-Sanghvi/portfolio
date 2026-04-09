@@ -11,7 +11,7 @@ export default function Projects() {
         tech: "PYTHON_ML // REACT // FASTAPI",
         status: "PATENT AWARDED",
         date: "2024.08",
-        url: "github.com/Aadish-Sanghvi"
+        url: "github.com/Aadish-Sanghvi/NALCO-SIH"
       }
     },
     {
@@ -22,7 +22,7 @@ export default function Projects() {
         tech: "LANGGRAPH // LLMS // NEXT.JS",
         status: "PRODUCTION",
         date: "2024.03",
-        url: "github.com/Aadish-Sanghvi"
+        url: "github.com/Aadish-Sanghvi/Medi-Mind"
       }
     },
     {
@@ -33,7 +33,18 @@ export default function Projects() {
         tech: "SCIKIT-LEARN // PANDAS // FLASK",
         status: "COMPLETE",
         date: "2023.11",
-        url: "github.com/Aadish-Sanghvi"
+        url: "github.com/Aadish-Sanghvi/Krishi_Moolya"
+      }
+    },
+    {
+      title: "AI Attendance System",
+      category: "Computer Vision",
+      description: "Computer vision-based attendance management using facial recognition — real-time processing with anti-spoofing mechanisms.",
+      meta: {
+        tech: "PYTHON // OPENCV // DL",
+        status: "COMPLETE",
+        date: "2023",
+        url: "github.com/Aadish-Sanghvi/AI-powered-attendance-management-system"
       }
     }
   ];
