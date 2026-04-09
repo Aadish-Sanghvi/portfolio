@@ -80,7 +80,7 @@ const StyledWrapper = styled.div`
   position: fixed;
   left: 0;
   right: 0;
-  bottom: 24px;
+  top: 24px;
   display: flex;
   justify-content: center;
   z-index: 1000;
@@ -159,10 +159,17 @@ const StyledWrapper = styled.div`
   }
 
   .menu a span {
+    display: none;
     font-size: 0.75rem;
     font-weight: 600;
     line-height: 1;
     margin-top: 4px;
+  }
+
+  @media (min-width: 768px) {
+    .menu a span {
+      display: block;
+    }
   }
 
   .menu a.active {

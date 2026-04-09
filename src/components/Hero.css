@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 40px;
+  padding-top: 120px;
   padding-bottom: 50px;
   gap: 3rem;
   flex-direction: column-reverse;
@@ -12,6 +12,7 @@
 @media (min-width: 768px) {
   .hero {
     flex-direction: row;
+    padding-top: 120px;
   }
 }
 
