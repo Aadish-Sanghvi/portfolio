@@ -31,11 +31,8 @@ export default function Hero() {
 
         <div className="hero-actions fade-in delay-3">
           <a href="#contact" className="btn btn-primary">Get in touch</a>
-          <a href="https://github.com/Aadish-Sanghvi" target="_blank" rel="noreferrer" className="btn btn-outline">
-            GitHub ↗
-          </a>
-          <a href="https://www.linkedin.com/in/aadish-sanghvi/" target="_blank" rel="noreferrer" className="btn btn-outline">
-            LinkedIn ↗
+          <a href="https://drive.google.com/file/d/1Sev35eomnRrrRGmgYMBzjF6-kYJLSr_4/view?usp=sharing" target="_blank" rel="noreferrer" className="btn btn-outline">
+            Resume ↗
           </a>
         </div>
       </div>
