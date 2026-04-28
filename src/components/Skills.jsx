@@ -4,33 +4,42 @@ import './Skills.css';
 const skillCategories = [
   {
     title: "Languages",
-    skills: ["Python", "SQL", "Spark", "C++"]
+    skills: ["Python", "SQL", "C++"]
   },
   {
     title: "Techniques",
-    skills: ["Machine Learning", "Deep Learning", "LoRA", "PEFT", "AWQ Quantization", "RAG"]
+    skills: ["Machine Learning", "Deep Learning", "LoRA", "PEFT", "Hyperparameter Tuning", "RAG", "OCR"]
   },
   {
     title: "Tools & Frameworks",
-    skills: ["Databricks", "Airflow", "Synapse", "PyTorch", "LangGraph", "Transformers", "FastAPI", "Git"]
+    skills: ["Azure Databricks", "Apache Airflow", "Azure Data Factory", "Apache Kafka", "Trino", "FastAPI", "Git"]
+  },
+  {
+    title: "Generative AI",
+    skills: ["PyTorch", "LangGraph", "LangChain", "Prompt Engineering", "Transformers", "Vector Stores", "Embeddings"]
   }
 ];
 
 const toolsLogos = [
   { name: "Databricks", slug: "databricks" },
   { name: "Airflow", slug: "apacheairflow" },
-  { name: "Synapse", slug: "azure", url: "https://api.iconify.design/logos:azure.svg" },
-  { name: "PyTorch", slug: "pytorch" },
-  { name: "LangGraph", slug: "langgraph" },
-  { name: "Transformers", slug: "huggingface" },
+  { name: "Azure Data Factory", slug: "azure", url: "https://api.iconify.design/logos:azure.svg" },
+  { name: "Kafka", slug: "apachekafka" },
+  { name: "Trino", slug: "trino" },
   { name: "FastAPI", slug: "fastapi" },
   { name: "Git", slug: "git" }
+];
+
+const genAILogos = [
+  { name: "PyTorch", slug: "pytorch" },
+  { name: "LangGraph", slug: "langchain", url: "https://api.iconify.design/simple-icons:langchain.svg" },
+  { name: "LangChain", slug: "langchain", url: "https://api.iconify.design/simple-icons:langchain.svg" },
+  { name: "Transformers", slug: "huggingface" }
 ];
 
 const languagesLogos = [
   { name: "Python", slug: "python" },
   { name: "SQL", slug: "postgresql" },
-  { name: "Spark", slug: "apachespark" },
   { name: "C++", slug: "cplusplus" }
 ];
 
@@ -57,6 +66,22 @@ export default function Skills() {
       </div>
 
       <div className="tech-stack-wrapper fade-in delay-2">
+        <div className="tech-stack-row">
+          <h4 className="stack-row-title">Generative AI</h4>
+          <div className="tech-stack-grid">
+            {genAILogos.map((tech, index) => (
+              <div key={index} className="tech-logo-container" title={tech.name}>
+                <img
+                  src={tech.url || `https://cdn.simpleicons.org/${tech.slug}`}
+                  alt={tech.name}
+                  className="tech-logo"
+                  loading="lazy"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+
         <div className="tech-stack-row">
           <h4 className="stack-row-title">Tools & Frameworks</h4>
           <div className="tech-stack-grid">

@@ -47,22 +47,22 @@ const experiences = [
       {
         title: "ETL Pipelines & Data Engineering",
         emoji: "🔄",
-        description: "Designed and optimized scalable ETL pipelines across Airflow, Synapse, and Databricks, enabling reliable data ingestion, transformation, and audit-driven processing.",
+        description: "Designed and optimized scalable ETL pipelines across Airflow, Azure Data Factory (ADF), and Databricks, enabling reliable data ingestion, transformation, and audit-driven processing.",
         whatItDoes: [
           "Orchestrates end-to-end ETL workflows using Airflow",
           "Builds pipelines from source → landing → delta with auditing",
           "Migrates workloads to Databricks Premium for scalability",
           "Handles complex MongoDB nested data transformations",
-          "Implements delete event triggers for data consistency in Delta Lake"
+          "Implements delete event triggers for data consistency in Delta Lake integrated with Kafka"
         ],
         technicalBreakdown: [
           "Airflow-based workflow orchestration",
-          "Synapse pipelines with structured data flow (landing → delta)",
+          "ADF pipelines with structured data flow (landing → delta)",
           "Delta Lake for reliable and auditable storage",
           "MongoDB nested array unnesting logic",
-          "Event-driven delete handling for maintaining data integrity"
+          "Event-driven delete handling via Kafka for maintaining data integrity"
         ],
-        stack: ["Python", "Apache Airflow", "Azure Synapse", "Databricks", "Delta Lake", "MongoDB", "SQL"]
+        stack: ["Python", "Apache Airflow", "Azure Data Factory", "Databricks", "Delta Lake", "MongoDB", "Apache Kafka", "SQL"]
       }
     ]
   }

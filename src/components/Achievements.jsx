@@ -15,19 +15,34 @@ export default function Achievements() {
       emoji: "📜"
     },
     {
-      title: "Smart India Hackathon 2024 — Finalist",
-      description: "National-level finalist building real-world industrial AI solutions.",
-      emoji: "🎯"
+      title: "Runner-up — Smart India Hackathon 2024",
+      description: "National-level runner-up for building real-world industrial AI solutions for NALCO.",
+      emoji: "🥈"
     },
     {
-      title: "GDSC Hackathon 2025 — Runner-up",
+      title: "Top 5 — Global Digital Health Summit 2025",
+      description: "Placed in the top 5 with Medimind, a multi-agent medical diagnosis system.",
+      emoji: "🏆"
+    },
+    {
+      title: "Runner-up — MIT-ADT AI Grand Challenge 2026",
+      description: "Runner-up for the Real-Time Claims Fraud Detection Engine.",
+      emoji: "🥈"
+    },
+    {
+      title: "Runner-up — GDSC Hackathon 2025",
       description: "1st runner-up at Google Developer Student Clubs hackathon.",
       emoji: "🥈"
     },
     {
-      title: "SVIM Hackathon — Finalist",
+      title: "Finalist — SVIM Hackathon",
       description: "Advanced to finals demonstrating strong technical problem-solving.",
       emoji: "🏁"
+    },
+    {
+      title: "NPTEL Certifications",
+      description: "Certified in DBMS, Data Analytics, and Computer Networks.",
+      emoji: "🎓"
     }
   ];
 

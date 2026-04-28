@@ -5,6 +5,12 @@ import './Projects.css';
 export default function Projects() {
   const projects = [
     {
+      title: "Real-Time Claims Fraud Detection Engine",
+      description: "Built a 3-layer insurance fraud detection system: forgery detection (overwriting, whitener and doc tampering) and graph-based syndicate detection across hospital-doctor-patient networks.",
+      link: "#",
+      emoji: "🕵️‍♂️"
+    },
+    {
       title: "NALCO Optimization System",
       description: "<strong>Government of India Patent awarded.</strong> Production software for NALCO to optimise raw-to-finished aluminium processing using ML-based process control. SIH 2024 finalist project.",
       link: "https://github.com/Aadish-Sanghvi/NALCO-SIH",
@@ -12,7 +18,7 @@ export default function Projects() {
     },
     {
       title: "MediMind — Multi-Agent Diagnosis",
-      description: "Multi-agent AI system for medical diagnosis using collaborative LLMs with agent orchestration for comprehensive health assessment.",
+      description: "Multi-agent AI system with vector-based memory using <strong>Faiss and Clinical-BERT</strong> embeddings. Integrated multiple diagnostic agents into a backend workflow using <strong>LangGraph</strong>, with <strong>Langfuse</strong> for agent tracing and observability.",
       link: "https://github.com/Aadish-Sanghvi/Medi-Mind",
       emoji: "🏥"
     },

@@ -18,7 +18,7 @@ export default function Hero() {
 
         <div className="hero-description fade-in delay-3">
           <p>
-            Final-year B.Tech CSE student, 2026 and Data Engineering Intern at Bajaj Finserv Health, specializing in scalable ETL pipelines and Applied AI. As a Smart India Hackathon 2024 Finalist, I’ve built high-impact solutions ranging from industrial AI systems for NALCO to RAG-based LLM applications and NLP-to-SQL interfaces. I thrive at the intersection of robust data architecture (Airflow, Synapse) and intelligent systems (LangGraph, Generative AI).
+            Final-year B.Tech CSE student, 2026 and Data Science Intern at Bajaj Finserv Health, specializing in scalable ETL pipelines and Applied AI. As a Smart India Hackathon 2024 Finalist, I’ve built high-impact solutions ranging from industrial AI systems for NALCO to RAG-based LLM applications and NLP-to-SQL interfaces. I thrive at the intersection of robust data architecture (Airflow, Synapse) and intelligent systems (LangGraph, Generative AI).
           </p>
         </div>
 
@@ -31,7 +31,7 @@ export default function Hero() {
 
         <div className="hero-actions fade-in delay-3">
           <a href="#contact" className="btn btn-primary">Get in touch</a>
-          <a href="https://drive.google.com/file/d/1Sev35eomnRrrRGmgYMBzjF6-kYJLSr_4/view?usp=sharing" target="_blank" rel="noreferrer" className="btn btn-outline">
+          <a href="https://drive.google.com/file/d/1g9e_SaeisHzY6eFiMCk2Sp2qo6UpxjH4/view?usp=sharing" target="_blank" rel="noreferrer" className="btn btn-outline">
             Resume ↗
           </a>
         </div>
